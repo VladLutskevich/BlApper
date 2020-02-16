@@ -1,0 +1,11 @@
+commit 362d6803efabbc74ce787e87577aed7112dccaca
+Author: vlutskevich <vlad01309@mail.ru>
+Date:   Sun Feb 16 15:41:49 2020 +0300
+
+    add task1/status.txt
+
+commit ce4b787b70c56be5f5d7c18649c3f058d85313a8
+Author: vlutskevich <vlad01309@mail.ru>
+Date:   Sun Feb 16 15:13:59 2020 +0300
+
+    add .gitignore
