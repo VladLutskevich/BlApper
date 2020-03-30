@@ -1,6 +1,5 @@
 (function () {
 
-    var countPosts = 20;
 
     var posts = [
         {
@@ -167,7 +166,7 @@
 
 
     function getPost(id) {
-        for (var i = 0; i < countPosts; i++) {
+        for (var i = 0; i < posts.length; i++) {
             if (posts[i].id === id) {
                 return i;
             }
@@ -184,8 +183,7 @@
 
     function addPost(post) {
         if (validatePost(post)) {
-            posts[countPosts] = post;
-            countPosts++;
+            posts.push(post);
             return true;
         }
         return false;
@@ -206,8 +204,7 @@
 
     function removePost(id) {
         var ind = getPost(id);
-        delete posts[ind];
-        countPosts--;
+        posts.splice(ind, 1);
     }
 
     function getPosts(skip = 0, top = 10, filterConfig) {
@@ -228,7 +225,7 @@
 
 
         if (typeof (author) === 'string' && author !== '') {
-            for (var i = countPosts - 1; i >= 0; i--) {
+            for (var i = posts.length - 1; i >= 0; i--) {
                 if (skipCount >= skip && topCount < top && fromDate <= posts[i].createdAt && toDate >= posts[i].createdAt && author === posts[i].author) {
                     arr.push(posts[i]);
                     topCount++;
@@ -239,7 +236,7 @@
                 skipCount++;
             }
         } else if (typeof (author) !== 'string' || author === '') {
-            for (var i = countPosts - 1; i >= 0; i--) {
+            for (var i = posts.length - 1; i >= 0; i--) {
                 if (skipCount >= skip && topCount < top && fromDate <= posts[i].createdAt && toDate >= posts[i].createdAt) {
                     arr.push(posts[i]);
                     topCount++;
