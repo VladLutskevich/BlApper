@@ -175,7 +175,7 @@
 
     function validatePost(post) {
         if (typeof (post.id) !== 'string' || post.id === '' || typeof (post.description) !== 'string' || post.description.length > 200
-            || !(post.createdAt instanceof Date) || typeof (post.author) !== 'string' || post.author === '' || (typeof (post.photoLink) !== 'undefined' && typeof (post.photoLink) !== 'string')) {
+            || !(post.createdAt instanceof Date) || typeof (post.author) !== 'string' || post.author === '' || typeof (post.photoLink) !== 'string') {
             return false;
         }
         return true;
@@ -192,8 +192,12 @@
     function editPost(id, post) {
         var ind = getPost(id);
         var tmpPost = Object.assign({}, posts[ind]);
-        tmpPost.description = post.description;
-        tmpPost.photoLink = post.photoLink;
+        if (typeof post.description !== 'undefined') {
+            tmpPost.description = post.description;
+        }
+        if (typeof post.photoLink !== 'undefined') {
+            tmpPost.photoLink = post.photoLink;
+        }
         if (validatePost(tmpPost)) {
             posts[ind] = tmpPost;
             return true;
@@ -217,7 +221,7 @@
         var skipCount = 0;
         var topCount = 0;
         if (typeof (toDate) === 'undefined') {
-            toDate = posts[countPosts - 1].createdAt;
+            toDate = posts[posts.length - 1].createdAt;
         }
         if (typeof (fromDate) === 'undefined') {
             fromDate = posts[0].createdAt;
