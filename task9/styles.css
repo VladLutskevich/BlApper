@@ -1,0 +1,214 @@
+
+body {
+    margin: 0px 0px 0px 0px;
+    background-color: #F8F8FF;
+}
+
+#headerDiv {
+    background-color: #D2D3D5;
+    position: fixed;
+    width: 100%;
+    min-height: 60px;
+}
+
+.headerH {
+    color: #808080;
+    margin: 20px 0px 0px 5%;
+    display: inline-block;
+}
+
+.headerH:hover {
+    background-color: #ACACAC;
+}
+
+
+#createdBy {
+    text-align: center;
+}
+
+#footerDiv {
+    background-color: #DCDCDC;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    align: bottom;
+    bottom: 0;
+}
+
+.postDiv {
+    height: fit-content;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #FFFAF0;
+    margin-top: 5px;
+}
+
+#userInfo {
+    height: fit-content;
+    width: 20%;
+    margin: 70px 0px 8vh 0px;
+    position: fixed;
+    min-width: 150px;
+    min-height: 120px;
+}
+
+#addTenDiv {
+    height: 5vh;
+    width: 100%;
+}
+
+
+#posts {
+    position: absolute;
+    height: fit-content;
+    width: 60%;
+    margin: 70px 40% 8vh 20%;
+    min-width: 120px;
+    min-height: 300px;
+    z-index: -1;
+}
+
+#search {
+    position: fixed;
+    height: fit-content;
+    width: 20%;
+    margin: 70px 0 8vh 80%;
+    min-width: 120px;
+    min-height: 120px;
+}
+
+#userInfoAvatar {
+    height: 80px;
+    width: 80px;
+    margin: 20px 0px 0px 20px;
+}
+
+#userInfoName {
+    margin: 20px 0px 0px 20px;
+}
+
+.userInfoH3 {
+    margin: 20px 0px 0px 20px;
+}
+
+.tag {
+    color: blue;
+    margin: 10px 0px 0px 20px;
+}
+
+.tag:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    height: 40px;
+    margin: 10px 0px 0px 30px;
+    float: left;
+}
+
+#logout {
+    float: right;
+    margin-right: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #ACACAC;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 5%;
+
+}
+
+button:hover {
+    background-color: #ACA11C;
+}
+
+input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 10px 20px;
+    box-sizing: border-box;
+}
+
+.searchH {
+    margin: 20px 0px 0px 20px;
+}
+
+#addTen {
+    margin-left: 45%;
+}
+
+#filters {
+    text-align: center;
+}
+
+.postName {
+    margin: 20px 0px 0px 20px;
+    display: inline-block;
+}
+
+.postTime {
+    margin-left: 20px;
+}
+
+.postAvatar {
+    height: 50px;
+    width: 50px;
+    margin: 20px 0px 0px 20px;
+    float: left;
+}
+
+.editDelete {
+    float: right;
+    margin-right: 1%;
+}
+
+.postText {
+    margin: 30px 20px 0px 20px;
+}
+
+.postImg {
+    height: 200px;
+
+    margin: 10px 0px 0px 20px;
+}
+
+
+.postImgDiv {
+
+}
+
+.likesCount {
+    color: red;
+    margin-left: 20px;
+}
+
+.likeButton {
+    margin-left: 10px;
+}
+
+.likeButton:hover {
+    background-color: red;
+}
+
+#searchButton {
+    margin-left: 20px;
+}
+
+
+
+
