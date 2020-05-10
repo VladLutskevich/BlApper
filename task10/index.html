@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        UpMessenger
+    </title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="styles.css" rel="stylesheet">
+    <script src="fillLocaleStorage.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <div id="headerDiv">
+        <span><img id="logo"
+                   src="images/logo.jpg"
+                   alt="logo"></span>
+        <h3 class="headerH" id="home"><a onclick="goHome()">Home</a></h3>
+        <h3 class="headerH" id="createPost"><a onclick="goCreate()">Create post</a></h3>
+        <h3 class="headerH" id="logout"><a id="log"></a></h3>
+    </div>
+</header>
+<main id="content">
+    <div id="userInfo">
+        <h3 id="userInfoName"></h3>
+        <img id="userInfoAvatar"
+             alt="user avatar">
+        <h3 class="userInfoH3">Posts: 3</h3>
+        <h3 class="userInfoH3">Likes: 3</h3>
+        <h3 class="userInfoH3" id="favouriteHashtags">Favourite hashtags:</h3>
+        <p>
+        <div class="tag">#GoldenCup</div>
+        <div class="tag">#WAT3-0LIV</div>
+        <div class="tag">#Unbeaten</div>
+        <div class="tag">#Arsenal</div>
+        <div class="tag">#EPL</div>
+        </p>
+
+    </div>
+    <div id="posts">
+        <div id="addTenDiv">
+            <button class="button" id="addTen" onclick="addTen()">Add 10 more</button>
+        </div>
+    </div>
+    <div id="search">
+        <form>
+            <h3 id="filters">Filters</h3>
+            <h3 class="searchH">Author:</h3>
+            <input type="text" id="author">
+            <h3 class="searchH">Hashtag:</h3>
+            <input type="text" placeholder="#Hashtag">
+            <h3 class="searchH">From:</h3>
+            <input type="datetime-local" placeholder="From" id="from">
+            <h3 class="searchH">To:</h3>
+            <input type="datetime-local" placeholder="To" id="to">
+            <button class="button" id="searchButton" onclick="searchFilter()">Search</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <div id="footerDiv">
+        <p id="createdBy">Created by Vlad Lutskevich | 5 group | email: vlad01309@mail.ru | Last update: 10.05.2020</p>
+    </div>
+</footer>
+</body>
+</html>
